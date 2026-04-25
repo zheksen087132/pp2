@@ -1,0 +1,37 @@
+import pygame
+
+pygame.init()
+
+screen = pygame.display.set_mode((800,600))
+color = (255,255,255)
+radius = 8
+drawing = False
+
+running = True
+
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_r:
+                color = (255,0,0)
+            if event.key == pygame.K_g:
+                color = (0,255,0)
+            if event.key == pygame.K_b:
+                color = (0,0,255)
+            if event.key == pygame.K_e:
+                color = (0,0,0)
+
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            drawing = True
+
+        if event.type == pygame.MOUSEBUTTONUP:
+            drawing = False
+
+    if drawing:
+        x,y = pygame.mouse.get_pos()
+        pygame.draw.circle(screen, color, (x,y), radius)
+
+    pygame.display.update()
