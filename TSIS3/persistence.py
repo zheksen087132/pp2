@@ -1,6 +1,4 @@
-"""
-persistence.py  —  Save / load leaderboard and settings
-"""
+
 
 import json
 import os

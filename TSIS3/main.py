@@ -1,8 +1,4 @@
-"""
-Racer  —  TSIS 3
-Run: python main.py
-Requires: pygame  (pip install pygame)
-"""
+
 
 import pygame
 import sys

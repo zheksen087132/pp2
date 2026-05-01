@@ -1,6 +1,4 @@
-"""
-racer.py  —  Core gameplay for Racer TSIS 3
-"""
+
 
 import pygame
 import random
